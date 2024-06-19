@@ -1,0 +1,62 @@
+<resources>
+
+    <string name="app_name">Overwatch2App</string>
+
+    <!-- Menu Activity Strings -->
+    <string name="overwatchTitleText">OVERWATCH 2</string>
+    <string name="heroesButtonTextDefault">Heroes</string>
+    <string name="mapsButtonTextDefault">Maps</string>
+    <string name="gamemodesButtonTextDefault">Game Modes</string>
+    <string name="playersButtonTextDefault">Players</string>
+
+    <!-- Heroes Activity Strings -->
+    <string name="heroesSectionTitleDefaultText">Heroes</string>
+    <string name="searchHeroEditTextHintDefault">Enter Hero\'s Name</string>
+    <string name="searchHeroButtonDefaultText">Search</string>
+    <string name="heroNameDisplayDefaultText">\?????????</string>
+    <string name="codenameTitleDefaultText">Codename:</string>
+    <string name="heroDescriptionQuoted">\"%1$s\"</string>
+    <string name="ageTitleDefaultText">Age:</string>
+    <string name="birthdayTitleDefaultText">Birthday:</string>
+    <string name="heroAgeDisplayDefaultText">\???</string>
+    <string name="heroBirthdayDisplayDefaultText">\?? ???</string>
+    <string name="heroLocationTitleDefaultText">Location:</string>
+    <string name="heroLocationDisplayDefaultText">\??????</string>
+    <string name="abilitiesButtonDefaultText">Abilities</string>
+    <string name="rolesButtonDefaultText">Role</string>
+    <string name="hitpointsButtonDefaultText">Hitpoints</string>
+
+    <!-- Roles Activity Strings -->
+    <string name="rolesSectionTitleDefaultText">Roles</string>
+    <string name="heroNameTitleDefaultText">Hero:</string>
+    <string name="roleTittleDefaultText">Hero Role:</string>
+    <string name="heroRoleDisplayDefaultText">\???????</string>
+    <string name="roleDescriptionTitleDefaultText">Role Description:</string>
+    <string name="roleDescriptionDisplayDefaultText">...................</string>
+    <string name="roleHeroesTitleTitleDefaultText">All Role Heroes:</string>
+
+    <!-- Maps Activity Strings -->
+    <string name="mapsSectionTitleDefaultText">Maps</string>
+    <string name="mapNameTitleDefaultText">Map:</string>
+    <string name="mapLocationTitleDefaultText">Location:</string>
+    <string name="mapLocationDisplayDefaultText">\?????, ?????</string>
+    <string name="gameModeMapTitleDefaultText">Game Mode:</string>
+    <string name="gameModeMapDisplayDefaultText">\???????????????</string>
+
+    <!-- Game Modes Activity Strings -->
+    <string name="gameModesSectionTitleDefaultText">Game Modes</string>
+    <string name="gameModesNameDefaultText">Game Mode:</string>
+    <string name="gameModeNameDisplayDefaultText">\???????????????</string>
+    <string name="allGameModeMapsTitleDefaultText">All Game Mode Maps:</string>
+    <string name="allGameModeMapsTitleFormatted">All %1$s Maps</string>
+
+    <!-- Players Activity Strings -->
+    <string name="playersSectionTitleDefaultText">Players</string>
+    <string name="searchPlayerEditTextHintDefault">Enter Username (Ex: TeKrop-2217)</string>
+    <string name="userNameTitleDefaultText">Username:</string>
+    <string name="searchPlayerButtonDefaultText">Search</string>
+    <string name="userNameDisplayDefaultText">\?????????</string>
+    <string name="playerStatsDefaultText">Player Stats:</string>
+    <string name="noStatsDisplayDefaultText">No Stats\nAvailable</string>
+
+</resources>

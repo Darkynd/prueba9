@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightblack"
+    tools:context=".gameModesActivity.GameModesActivity">
+
+    <TextView
+        android:id="@+id/gameModesSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/gameModesSectionTitleDefaultText"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/gameModeIconDisplay"
+        app:layout_constraintEnd_toEndOf="@+id/gameModeIconDisplay"
+        app:layout_constraintStart_toStartOf="@+id/gameModeIconDisplay" />
+
+    <TextView
+        android:id="@+id/gameModeNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gameModesNameDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gameModesSectionTitle"
+        app:layout_constraintEnd_toEndOf="@+id/gameModeNameDisplay"
+        app:layout_constraintStart_toStartOf="@+id/gameModeNameDisplay"
+        app:layout_constraintTop_toTopOf="@+id/gameModesSectionTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allGameModeMapsRecyclerView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintEnd_toEndOf="@+id/allGameModeMapsTitle"
+        app:layout_constraintStart_toStartOf="@+id/allGameModeMapsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/allGameModeMapsTitle"
+        tools:listitem="@layout/recyclerview_allgamemodemaps_item" />
+
+    <TextView
+        android:id="@+id/allGameModeMapsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/allGameModeMapsTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/gameModeNameDisplay"
+        app:layout_constraintStart_toStartOf="@+id/gameModeNameDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/gameModeNameDisplay" />
+
+    <TextView
+        android:id="@+id/gameModeNameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/gameModeNameDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toBottomOf="@+id/gameModeNameTitle" />
+
+    <ImageView
+        android:id="@+id/gameModeIconDisplay"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/overwatch_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/gameModeDescriptionDisplay"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/roleDescriptionDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/gameModeIconDisplay"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/gameModeIconDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/gameModeIconDisplay" />
+
+    <ImageView
+        android:id="@+id/overwatchLogoImageBackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/overwatch_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

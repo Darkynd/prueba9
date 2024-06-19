@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightblack"
+    tools:context=".playersActivity.PlayersActivity">
+
+    <TextView
+        android:id="@+id/playersSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="150dp"
+        android:text="@string/playersSectionTitleDefaultText"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchPlayerButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="160dp"
+        android:background="@drawable/custom_activity_button"
+        android:text="@string/searchPlayerButtonDefaultText"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/searchPlayerEditText"
+        app:layout_constraintStart_toEndOf="@+id/overwatchLogoImageBackButton"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/searchPlayerEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:ems="14"
+        android:gravity="center"
+        android:hint="@string/searchPlayerEditTextHintDefault"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/playersSectionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/playersSectionTitle"
+        tools:ignore="Autofill,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/userNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/userNameTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/playersSectionTitle"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="@+id/playersSectionTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/userNameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/userNameDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/userNameTitle"
+        app:layout_constraintStart_toStartOf="@+id/userNameTitle"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTitle" />
+
+    <TextView
+        android:id="@+id/playerStatsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/playerStatsDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameTitle"
+        app:layout_constraintEnd_toEndOf="@+id/searchPlayerButton"
+        app:layout_constraintStart_toStartOf="@+id/searchPlayerButton"
+        app:layout_constraintTop_toTopOf="@+id/userNameTitle" />
+
+    <TextView
+        android:id="@+id/noStatsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/noStatsDisplayDefaultText"
+        android:textColor="@color/grey"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/playerStatsTitle"
+        app:layout_constraintStart_toStartOf="@+id/playerStatsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/playerStatsTitle"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playerStatsTreeRecyclerView"
+        android:layout_width="275dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/overwatchLogoImageBackButton"
+        tools:listitem="@layout/recyclerview_playerstat_item" />
+
+    <ImageView
+        android:id="@+id/overwatchLogoImageBackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/overwatch_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

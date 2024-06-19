@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightblack"
+    tools:context=".roleActivity.RoleActivity">
+
+    <TextView
+        android:id="@+id/rolesSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="125dp"
+        android:text="@string/rolesSectionTitleDefaultText"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heroNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/heroNameTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/rolesSectionTitle"
+        app:layout_constraintStart_toStartOf="@+id/rolesSectionTitle"
+        app:layout_constraintTop_toBottomOf="@+id/rolesSectionTitle" />
+
+    <TextView
+        android:id="@+id/heroNameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/heroNameDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/heroNameTitle"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="@+id/heroNameTitle"
+        app:layout_constraintTop_toBottomOf="@+id/heroNameTitle" />
+
+    <TextView
+        android:id="@+id/roleNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/roleTittleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/heroNameDisplay"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/heroNameDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/heroNameDisplay" />
+
+    <TextView
+        android:id="@+id/heroRoleDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/heroRoleDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/roleNameTitle"
+        app:layout_constraintStart_toStartOf="@+id/roleNameTitle"
+        app:layout_constraintTop_toBottomOf="@+id/roleNameTitle" />
+
+    <TextView
+        android:id="@+id/roleDescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roleDescriptionTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/heroNameTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/heroNameTitle" />
+
+    <TextView
+        android:id="@+id/roleDescriptionDisplay"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/roleDescriptionDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/roleDescriptionTitle"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/roleDescriptionTitle"
+        app:layout_constraintTop_toTopOf="@+id/heroNameDisplay" />
+
+    <TextView
+        android:id="@+id/allRoleHeroesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="@string/roleHeroesTitleTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rolesSectionTitle"
+        app:layout_constraintStart_toEndOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toTopOf="@+id/rolesSectionTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allRoleHeroesRecyclerView"
+        android:layout_width="175dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/allRoleHeroesTitle"
+        app:layout_constraintStart_toStartOf="@+id/allRoleHeroesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/allRoleHeroesTitle"
+        tools:listitem="@layout/recyclerview_allroleheroes_item" />
+
+    <ImageView
+        android:id="@+id/overwatchLogoImageBackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/overwatch_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

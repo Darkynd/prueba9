@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightblack"
+    tools:context=".heroesActivity.HeroesActivity">
+
+
+    <TextView
+        android:id="@+id/heroesSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/heroesSectionTitleDefaultText"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/heroPortrait"
+        app:layout_constraintEnd_toEndOf="@+id/heroPortrait"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="@+id/heroPortrait"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchHeroEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:ems="12"
+        android:gravity="center"
+        android:hint="@string/searchHeroEditTextHintDefault"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/heroesSectionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/heroesSectionTitle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Autofill,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/searchHeroButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_activity_button"
+        android:text="@string/searchHeroButtonDefaultText"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/searchHeroEditText"
+        app:layout_constraintStart_toStartOf="@+id/searchHeroEditText"
+        app:layout_constraintTop_toTopOf="@+id/abilitiesButton"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/heroPortrait"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="125dp"
+        android:src="@drawable/overwatch_logo"
+        app:layout_constraintEnd_toStartOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/heroNameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/heroNameDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/heroesSectionTitle"
+        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintStart_toStartOf="@+id/heroesSectionTitle"
+        app:layout_constraintTop_toBottomOf="@+id/heroPortrait" />
+
+    <TextView
+        android:id="@+id/ageHeroTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="@string/ageTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/heroLocationTitle"
+        app:layout_constraintStart_toStartOf="@+id/searchHeroEditText"
+        app:layout_constraintTop_toTopOf="@+id/heroPortrait" />
+
+    <TextView
+        android:id="@+id/heroAgeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/heroAgeDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/ageHeroTitle"
+        app:layout_constraintStart_toStartOf="@+id/ageHeroTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ageHeroTitle" />
+
+    <TextView
+        android:id="@+id/birthdayHeroTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthdayTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/searchHeroEditText"
+        app:layout_constraintTop_toTopOf="@+id/ageHeroTitle" />
+
+    <TextView
+        android:id="@+id/heroBirthdayDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/heroBirthdayDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/birthdayHeroTitle"
+        app:layout_constraintStart_toStartOf="@+id/birthdayHeroTitle"
+        app:layout_constraintTop_toBottomOf="@+id/birthdayHeroTitle" />
+
+    <TextView
+        android:id="@+id/heroLocationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/heroLocationTitleDefaultText"
+        android:textColor="@color/orange"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/heroLocationDisplay"
+        app:layout_constraintEnd_toEndOf="@+id/searchHeroButton"
+        app:layout_constraintStart_toStartOf="@+id/searchHeroButton"
+        app:layout_constraintTop_toBottomOf="@+id/searchHeroButton" />
+
+    <TextView
+        android:id="@+id/heroLocationDisplay"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/heroLocationDisplayDefaultText"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionDisplay"
+        app:layout_constraintStart_toStartOf="@+id/descriptionDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/heroLocationTitle" />
+
+    <TextView
+        android:id="@+id/descriptionDisplay"
+        android:layout_width="275dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toBottomOf="@+id/heroLocationDisplay" />
+
+    <Button
+        android:id="@+id/abilitiesButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/custom_activity_button"
+        android:text="@string/abilitiesButtonDefaultText"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/overwatchLogoImageBackButton"
+        app:layout_constraintTop_toTopOf="@+id/heroPortrait"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/roleButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_activity_button"
+        android:text="@string/rolesButtonDefaultText"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/heroPortrait"
+        app:layout_constraintEnd_toEndOf="@+id/hitPointsButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/hitPointsButton"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/hitPointsButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_activity_button"
+        android:text="@string/hitpointsButtonDefaultText"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/heroPortrait"
+        app:layout_constraintEnd_toEndOf="@+id/abilitiesButton"
+        app:layout_constraintStart_toStartOf="@+id/abilitiesButton"
+        app:layout_constraintTop_toTopOf="@+id/heroPortrait"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/overwatchLogoImageBackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/overwatch_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionDisplay"
+        app:layout_constraintVertical_bias="0.587"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
